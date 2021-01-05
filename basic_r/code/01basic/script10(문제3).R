@@ -1,7 +1,8 @@
 data(package = .packages(all.available = TRUE))
-
+.libPaths("D:\\library")
+install.packages("ggplot2")
 library(ggplot2)
-midwest
+midwest <- as.data.frame(midwest)
 ?midwest
 
 # Q1, ggplot2의 Midwest 데이터를 데이터 프레임 형태로 불러와서 데이터의 (구조, 끝부분, 뷰창, 차원, 요약)을 파악하세요
@@ -10,6 +11,7 @@ tail(midwest)
 View(midwest)
 levels(midwest)
 class(midwest)
+dim(midwest)
 summary(midwest)
 
 # Q2, poptotal(전체인구)을 total로 popasian(아시아인구)을 asian으로 변수명을 수정하세요
